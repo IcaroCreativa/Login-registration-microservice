@@ -24,8 +24,8 @@ This API, written in Python and using the Flask framework, allows you to perform
 # Technologies  
 
 Liste des technologies utilisées dans ce projet : 
-* <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="90" alt="Laravel Logo">[Laravel Breeze](https://laravel.com/docs/9.x/starter-kits) : Version 9.
-* <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg" width="30" alt="flask Logo">[Flask](https://vue3-fr.netlify.app/guide/migration/introduction.html) : Version 2.2.2
+* <img src="https://www.python.org/static/community_logos/python-logo-inkscape.svg" width="90" alt="Python Logo">[Python](https://www.python.org/) : Version 3.11.1.
+* <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg" width="30" alt="flask Logo">[Flask](https://flask.palletsprojects.com/en/2.2.x/) : Version 2.2.2
 * <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT15d13IJ7gtixCZJXH-N-EctmRjvZyI8yw6BcbTX7A-g&s" width="60" alt="MySQL Logo">[MySQL](https://upload.wikimedia.org/wikipedia/commons/0/0a/MySQL_textlogo.svg) : Version 5.7 +
 
 
@@ -46,35 +46,13 @@ After cloning the project, type the following shell commands:
 Modify the connector to use your own database
 `conn = mysql.connector.connect(user='you username', password='your password', host='localhost', database='your database name')`  
 
+# Launch the app
 
-
-4. install npm dependencies  
-`npm install`
-
-5. generate a key for your application  
-`php artisan key:generate`
-
-6. add the database connection config to your .env file  
-`DB_CONNECTION=mysql`  
-`DB_HOST=127.0.0.1`  
-`DB_PORT=3306`  
-`DB_DATABASE=commit_yowl`  
-`DB_USERNAME=root`  
-`DB_PASSWORD=*votre mot de passe de mysql*`
-
-7. run the migration files to generate the schema  
-`php artisan migrate`
-
-8. seed your database with some users, categories, posts and comments  
-`php artisan db:seed`
-
-9. run webpack in 2 terminals  
-`npm run dev`
-`php artisan serve`  
-
-10. Warning !  
-Requires prior installation of Nodejs   
-[nodejs](https://nodejs.org/en/)  
+1. run wamp or lamp server
+2. run the app.py file with the command:
+ `flask run`
+3. Test the API with Postman or directly in your browser at [http://127.](http://127.0.0.1:5000/)
+4. You can create a user, login, retrieve all users, all articles from home page
 
 
 ## License
