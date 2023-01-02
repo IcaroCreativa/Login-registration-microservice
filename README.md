@@ -1,29 +1,15 @@
 
 
 
-
-
-Install Flask and the Flask-MySQL connector using pip install flask flask-mysql.
-Import Flask and Flask-MySQL into your app.py file with from flask import Flask and from flaskext.mysql import MySQL.
-Create a MySQL database using a local environment like WAMP or LAMP, and configure the app.py file to connect to this database using the appropriate connection parameters. Make sure the MySQL server is running before launching the app.
-To test the API, you can use a software like Postman. In the project, you will find a Postman file (filename.postman_collection.json) containing examples of requests you can send to the API. The API responds with JSON data, except for the GET methods of the login and register routes.
-
-In addition to the CRUD user app, you can also run a separate client app (client.py) on its own server. This app, written in Python and using the Flask framework, will not have its own database, but will instead render the JSON data from the CRUD user app. This client file allows you to test the API by opening a connection on a different port.
-
-Thank you for using this API!
-
-
 # Project Name
  Login-registration-microservice
-
-
 
 ## General Information
 This API, written in Python and using the Flask framework, allows you to perform create, read, update, and delete operations on user data stored in a MySQL database.
 
 # Technologies  
 
-Liste des technologies utilisées dans ce projet : 
+List of technologies ind this project : 
 * <img src="https://www.python.org/static/community_logos/python-logo-inkscape.svg" width="90" alt="Python Logo">[Python](https://www.python.org/) : Version 3.11.1.
 * <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg" width="30" alt="flask Logo">[Flask](https://flask.palletsprojects.com/en/2.2.x/) : Version 2.2.2
 * <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT15d13IJ7gtixCZJXH-N-EctmRjvZyI8yw6BcbTX7A-g&s" width="60" alt="MySQL Logo">[MySQL](https://upload.wikimedia.org/wikipedia/commons/0/0a/MySQL_textlogo.svg) : Version 5.7 +
@@ -51,8 +37,9 @@ Modify the connector to use your own database
 1. run wamp or lamp server
 2. run the app.py file with the command:
  `flask run`
-3. Test the API with Postman or directly in your browser at [http://127.](http://127.0.0.1:5000/)
-4. You can create a user, login, retrieve all users, all articles from home page
+3. To test the API, you can use a software like Postman. In the project, you will find a Postman file (filename.postman_collection.json) containing examples of requests you can send to the API. The API responds with JSON data, except for the GET methods of the login and register routes.
+4. You can test the API directly in your browser at [http://127.](http://127.0.0.1:5000/)
+5. You can create a user, login, retrieve all users, all articles from home page
 
 
 ## License
