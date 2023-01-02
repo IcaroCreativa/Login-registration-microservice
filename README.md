@@ -43,8 +43,8 @@ After cloning the project, type the following shell commands:
 `pip install flask flask-mysql`
 
 3. Create a MySQL database using a local environment like WAMP or LAMP, and configure the db.py file in config folder to connect to this database using the appropriate connection parameters. Make sure the MySQL server is running before launching the app.
-`# Modify the connector to use your own database
-    conn = mysql.connector.connect(user='root', password='', host='localhost', database='schema')`  
+Modify the connector to use your own database
+`conn = mysql.connector.connect(user='you username', password='your password', host='localhost', database='your database name')`  
 
 
 
