@@ -1,11 +1,7 @@
-#
-Welcome to the API for the CRUD user app! 
-This API, written in Python and using the Flask framework, allows you to perform create, read, update, and delete operations on user data stored in a MySQL database.
-
-## Tehcnologies
 
 
-To use the API, you must have the CRUD user app running on its own server. Before launching the app, please follow the steps below:
+
+
 
 Install Flask and the Flask-MySQL connector using pip install flask flask-mysql.
 Import Flask and Flask-MySQL into your app.py file with from flask import Flask and from flaskext.mysql import MySQL.
@@ -27,8 +23,6 @@ This API, written in Python and using the Flask framework, allows you to perform
 
 # Technologies  
 
-
-
 Liste des technologies utilisées dans ce projet : 
 * <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="90" alt="Laravel Logo">[Laravel Breeze](https://laravel.com/docs/9.x/starter-kits) : Version 9.
 * <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg" width="30" alt="flask Logo">[Flask](https://vue3-fr.netlify.app/guide/migration/introduction.html) : Version 2.2.2
@@ -48,15 +42,11 @@ After cloning the project, type the following shell commands:
 2. install flask and flask-mysql with pip  
 `pip install flask flask-mysql`
 
-3. Create a MySQL database using a local environment like WAMP or LAMP, and configure the app.py file to connect to this database using the appropriate connection parameters. Make sure the MySQL server is running before launching the app.  
+3. Create a MySQL database using a local environment like WAMP or LAMP, and configure the db.py file in config folder to connect to this database using the appropriate connection parameters. Make sure the MySQL server is running before launching the app.
+`# Modify the connector to use your own database
+    conn = mysql.connector.connect(user='root', password='', host='localhost', database='schema')`  
 
-# Create a instance of MySQL to connect with python on databse
-`mysql = MySQL(autocommit=True)
-app.config['MYSQL_DATABASE_USER'] = 'your username'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'your password'
-app.config['MYSQL_DATABASE_DB'] = 'your databse name'
-app.config['MYSQL_DATABASE_HOST'] = ' your database host'
-app.config['MYSQL_DATABASE_PORT'] = port of your host`
+
 
 4. install npm dependencies  
 `npm install`
