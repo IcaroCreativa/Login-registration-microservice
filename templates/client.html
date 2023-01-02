@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Login-Registration Client</title>
+</head>
+
+  
+<header aria-label="Site Header" class="shadow-sm">
+ 
+    
+    <div class="border-t border-gray-100">
+      <nav class="flex items-center justify-star overflow-x-auto p-4 text-sm font-medium">
+        <form method="post" action="/getuser">
+          <button class="w-50 h-10 mt-2 px-2 p-1 ml-4 bg-red-600 text-white rounded-sm hover:bg-red-500" type="submit" value="Submit">Get User</button>
+          <input class="pl-2 border-[1px] border-red-500  rounded-sm" type="text" id="data" name="email" value="" placehlde="Enter mail">
+        </form> 
+      
+      
+        <button onclick="clean()" class="w-50 h-10 mt-2 p-1 ml-4 bg-lime-600 hover:bg-lime-500 text-white rounded-sm">clean screen</button>
+        <form action="/getusers" method="GET">
+        <button type="submit"  class="w-50 h-10 mt-2 p-1 ml-4 bg-blue-600 hover:bg-blue-500 text-white rounded-sm" href="">Get all Users</button>
+        </form>
+    </nav>
+    </div>
+  </header>
+
+
+
+
+  <body>
+ 
+ <div id="users">
+  {% for user in data %}
+      <div   class="bg-gray-100 border-[1px] mx-auto w-[300px] border-gray-200 rounded-sm shadow-lg m-2">
+          <p  class="bg-bleu-300 pl-2 mt-2"><strong>Username: </strong>{{user[1]}}</p>
+          <p class="bg-bleu-300 pl-2"><strong>Email: </strong>{{user[2]}}</p>
+          <p class="bg-bleu-300 pl-2 mb-2"><strong>Created at: </strong>{{user[4]}}</p>
+          <form action="/deleteuser" class="flex justify-end p-2" method="post">
+            <button class="w-32 h-8 bg-red-600 text-white hover:bg-red-500" type="submit" name="email" value="{{user[2]}}">Delete</button>
+          </form>
+        </div>
+      
+       
+    {% endfor %}
+    <!-- <p>{{data}}</p> -->
+    {% if user%}
+    <div   class="bg-gray-100 border-[1px] mx-auto w-[330px] border-gray-200 rounded-sm shadow-lg m-2">
+      <p  class="bg-bleu-300 pl-2 mt-2"><strong>Username: </strong>{{user['username']}}</p>
+      <p class="bg-bleu-300 pl-2"><strong>Email: </strong>{{user['email']}}</p>
+      <p class="bg-bleu-300 pl-2 mb-2"><strong>Created at: </strong>{{user['created_at']}}</p>
+      <form class="flex justify-end p-2" action="/deleteuser" method="DELETE">
+        <button class="w-32 h-8 bg-red-600 text-white hover:bg-red-500 rounded-sm" type="submit" value="{{user['email']}}">Delete</button>
+      </form>
+    </div>
+    {%endif%}
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for msg in messages %}
+        <div id="text" class="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4" role="alert">
+          <div class="flex">
+            <div class="py-1"><svg class="fill-current h-6 w-6 text-orange-500 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/></svg></div>
+            <div>
+              <p  class="font-bold">{{msg}}</p>
+            </div>
+          </div>
+        </div> 
+      {%endfor%}
+    {% endif %}
+  {%endwith%}
+ </div>
+  </div>
+
+</body>
+</body>
+</html>
+
+<script>
+
+function clean(){
+  allusers=document.getElementById('users')
+  allusers.style.display='none'
+}
+
+</script>
