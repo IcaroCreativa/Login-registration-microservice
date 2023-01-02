@@ -9,7 +9,7 @@ This API, written in Python and using the Flask framework, allows you to perform
 
 # Technologies  
 
-List of technologies ind this project : 
+List of technologies in this project : 
 * <img src="https://www.python.org/static/community_logos/python-logo-inkscape.svg" width="90" alt="Python Logo">[Python](https://www.python.org/) : Version 3.11.1.
 * <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg" width="30" alt="flask Logo">[Flask](https://flask.palletsprojects.com/en/2.2.x/) : Version 2.2.2
 * <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT15d13IJ7gtixCZJXH-N-EctmRjvZyI8yw6BcbTX7A-g&s" width="60" alt="MySQL Logo">[MySQL](https://upload.wikimedia.org/wikipedia/commons/0/0a/MySQL_textlogo.svg) : Version 5.7 +
